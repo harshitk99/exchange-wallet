@@ -1,8 +1,10 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 function Nav() {
+  const Navigate=useNavigate();
   return (
     <div className='w-full h-24 bg-slate-200  flex justify-between items-center'>
         <div className='flex items-center p-5 text-white text-2xl bg-blue-500 rounded-md p-2 ml-4'>
@@ -10,11 +12,9 @@ function Nav() {
         <h1 className='rounded-md font-semibold '>DC-EXCHANGE </h1>
         </div>
         <div className='flex gap-x-2 mr-7'>
-        <button className='px-4 py-2 rounded-full bg-blue-500 text-white font-semibold '>Login</button>
+        <button className='px-4 py-2 rounded-full bg-blue-500 text-white font-semibold '>
+          <NavLink to="/login">Login</NavLink></button>
         <button className='px-4 py-2 rounded-full bg-blue-500 text-white font-semibold '>Signup</button>
-        <NavLink to="/dashboard">Dashboard</NavLink>
-       
-
         </div>
     </div>
   )

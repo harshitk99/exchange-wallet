@@ -1,11 +1,18 @@
 import React from 'react'
 import { GoogleLogin } from '@react-oauth/google'
+import { useNavigate } from 'react-router-dom';
 
 
-function Page() {``
+function Page() {
+    const nav=useNavigate();
     const responseMessage = (response) => {
+
         console.log(response);
-        return true;
+        
+        setTimeout(function(){
+            nav('/dashboard');
+        },2000);
+        
         
     };
     const errorMessage = (error) => {
