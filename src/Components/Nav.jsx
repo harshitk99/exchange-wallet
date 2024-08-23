@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
+
 
 function Nav() {
   return (
@@ -10,6 +12,9 @@ function Nav() {
         <div className='flex gap-x-2 mr-7'>
         <button className='px-4 py-2 rounded-full bg-blue-500 text-white font-semibold '>Login</button>
         <button className='px-4 py-2 rounded-full bg-blue-500 text-white font-semibold '>Signup</button>
+        <NavLink to="/dashboard">Dashboard</NavLink>
+       
+
         </div>
     </div>
   )

@@ -2,9 +2,11 @@ import React from 'react'
 import { GoogleLogin } from '@react-oauth/google'
 
 
-function Page() {
+function Page() {``
     const responseMessage = (response) => {
         console.log(response);
+        return true;
+        
     };
     const errorMessage = (error) => {
         console.log(error);
@@ -22,7 +24,7 @@ function Page() {
             <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
         </div>
         </div>
-        <img className='w-1/3 h-2/4 object-cover absolute top-2/4' src="https://images.ctfassets.net/c5bd0wqjc7v0/6TEOvIYU6qtgLm87Y4mK5s/4171df02eabc835c518884c2b3476380/hero_3x_B.png?fm=webp&q=100&w=1180" alt="" />
+        <img className='w-1/3 h-2/4 object-cover  top-2/4' src="https://images.ctfassets.net/c5bd0wqjc7v0/6TEOvIYU6qtgLm87Y4mK5s/4171df02eabc835c518884c2b3476380/hero_3x_B.png?fm=webp&q=100&w=1180" alt="" />
         </div>
 
         
