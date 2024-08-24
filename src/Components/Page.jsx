@@ -1,14 +1,18 @@
 import React from 'react'
 import { GoogleLogin } from '@react-oauth/google'
 import { useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
 
 
 function Page() {
+    
     const nav=useNavigate();
     const responseMessage = (response) => {
-
+        const data=jwtDecode(response.credential);
+        const userName=data.name;
         console.log(response);
-        
+
+        console.log(userName);
         setTimeout(function(){
             nav('/dashboard');
         },2000);
